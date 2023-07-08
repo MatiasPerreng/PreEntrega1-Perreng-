@@ -1,0 +1,40 @@
+.item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-title {
+    margin-top: 10px;
+}
+
+.item-description {
+    color: #666;
+}
+
+.item-quantity {
+    margin-top: 10px;
+}
+
+.quantity-input {
+    width: 50px;
+}
+
+.add-to-cart-button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
