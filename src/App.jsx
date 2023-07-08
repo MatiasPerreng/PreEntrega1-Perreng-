@@ -6,15 +6,8 @@ import viteLogo from '/vite.svg'
 function App() {
   return (
 
-    <Layout>
-
-      <Contenedor>
-
-      </Contenedor>
-
-      <h2>Acá va a ir mi calculadora</h2>
-
-    </Layout>
+    <></>
+    
   )
 
 
