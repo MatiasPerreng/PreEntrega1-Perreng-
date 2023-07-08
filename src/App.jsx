@@ -4,8 +4,9 @@ import NavElements from './componentes/NavElements';
 import ListContainer from './componentes/ItemListContainer';
 import ItemContainer from './componentes/itemsOfContainer';
 import CartWidget from './componentes/CartWidget';
-import reactLogo from './assets/react.svg';
 import 'bootstrap/dist/css/bootstrap.css';
+import reactLogo from './assets/react.svg';
+
 
 
 
