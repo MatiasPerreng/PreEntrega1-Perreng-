@@ -1,8 +1,9 @@
 import './styles.css'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import CartWidget from '../CartWidget';
 
-const Navbar = ({ child1, child2, child3, child4 }) => {
+const Navbar = ({ child1, child2, child3, child4, child5 }) => {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container">
@@ -10,9 +11,10 @@ const Navbar = ({ child1, child2, child3, child4 }) => {
           {child1}
         </a>
         <ul className="navbar-nav d-flex flex-row">
-          <li className="nav-item"><a href="">{child2}</a></li>
-          <li className="nav-item"><a href="">{child3}</a></li>
-          <li className="nav-item"><a href="">{child4}</a></li>
+          {child2}
+          {child3}
+          {child4}
+          <CartWidget />
         </ul>
       </div>
     </nav>
