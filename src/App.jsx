@@ -22,7 +22,7 @@ function App() {
       />
 
 
-      <ListContainer>
+      <ListContainer greetings="Bienvenidos a mi primera entrega CODERS">
         <ItemContainer value="Manzana" />
         <ItemContainer value="Banana" />
         <ItemContainer value="Naranja" />

@@ -1,9 +1,13 @@
 import './styles.css'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { useState } from 'react';
 import CartWidget from '../CartWidget';
 
 const Navbar = ({ child1, child2, child3, child4, child5 }) => {
+
+ 
+
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container">
@@ -15,7 +19,7 @@ const Navbar = ({ child1, child2, child3, child4, child5 }) => {
           {child3}
           {child4}
           <CartWidget />
-          <li className='numberItem'>( 1 )</li>
+          <li className='numberItem'>( 0 )</li>
         </ul>
       </div>
     </nav>
