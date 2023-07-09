@@ -1,13 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
-import imagen from './spongebob.png'
+
 
 function ItemContainer(props) {
   return (
     <div className="item card text-center">
       <img
-        src={imagen}
+        src={props.img}
         alt="Imagen del producto"
         className="item-image card-img-top mx-auto"
       />
