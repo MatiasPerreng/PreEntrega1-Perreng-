@@ -6,7 +6,7 @@ import './styles.css';
 function ItemContainer(props) {
   return (
     <div className="item card text-center">
-      <img
+      <img 
         src={props.img}
         alt="Imagen del producto"
         className="item-image card-img-top mx-auto"
