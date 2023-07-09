@@ -3,7 +3,6 @@ import NavBar from './componentes/Navbar';
 import NavElements from './componentes/NavElements';
 import ListContainer from './componentes/ItemListContainer';
 import ItemContainer from './componentes/itemsOfContainer';
-import CartWidget from './componentes/CartWidget';
 import 'bootstrap/dist/css/bootstrap.css';
 import reactLogo from './assets/react.svg';
 
@@ -20,7 +19,6 @@ function App() {
         child2={<NavElements value="Inicio" />}
         child3={<NavElements value="Tienda" />}
         child4={<NavElements value="Contacto" />}
-
       />
 
 

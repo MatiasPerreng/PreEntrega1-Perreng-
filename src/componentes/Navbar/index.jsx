@@ -15,6 +15,7 @@ const Navbar = ({ child1, child2, child3, child4, child5 }) => {
           {child3}
           {child4}
           <CartWidget />
+          <li className='numberItem'>( 1 )</li>
         </ul>
       </div>
     </nav>
