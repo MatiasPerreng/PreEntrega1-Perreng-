@@ -5,8 +5,8 @@ import ListContainer from './componentes/ItemListContainer';
 import ItemContainer from './componentes/itemsOfContainer';
 import 'bootstrap/dist/css/bootstrap.css';
 import reactLogo from './assets/react.svg';
-import banana from './imagenes/banana.webp'
-import manzana from './imagenes/manzana.webp'
+import banana from './imagenes/Banana.webp'
+import manzana from './imagenes/Manzana.webp'
 import naranja from './imagenes/Naranja.webp'
 import mandarina from './imagenes/Mandarina.jpg'
 import tomate from './imagenes/Tomate.webp'
