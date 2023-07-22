@@ -1,21 +1,27 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import ItemContainer from '../itemsOfContainer';
 
-function ListContainer(props) {
+function ListItem(props) {
+
+  console.log("PERSONAJES: ", props.data);
+
+  function renderCharacters() {
+    return props.data.map((character) => (
+      <ItemContainer
+        key={character.id} 
+        character={character} 
+      />
+    ));
+  }
+
   return (
-    <div className="container-fluid rounded">
-      <div className="greetings">
-        <h1 style={{ color: 'black', fontSize: '24px', textAlign: 'center', marginTop: '25px'  }}>{props.greetings}</h1>
-      </div>
-      <div className="row">
-        {props.children.map((child, index) => (
-          <div key={index} className="col-lg-4 col-md-6">
-            {child}
-          </div>
-        ))}
-      </div>
+    <div className='list__container'>
+      <h1>Buenos días</h1>
+      {renderCharacters()}
     </div>
   );
 }
 
-export default ListContainer;
+export default ListItem;
+
