@@ -16,7 +16,7 @@ function ListItem(props) {
   }
 
   return (
-    <div className='list__container'>
+    <div className='list__container row'>
       <h1>Buenos días</h1>
       {renderCharacters()}
     </div>

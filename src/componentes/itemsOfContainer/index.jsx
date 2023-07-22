@@ -8,7 +8,7 @@ function ItemContainer(props) {
   const character = props.character; 
 
   return (
-    <div className="item card text-center">
+    <div className="item card text-center col-6">
       <img
         src={character.image}
         alt={character.name}

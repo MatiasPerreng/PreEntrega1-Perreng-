@@ -6,3 +6,14 @@ text-decoration: none!important;
     margin-left:6px;
     color: white;
 }
+
+.item-list {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.item-list:hover{
+    color: rgba(71, 206, 67, 0.573);
+}

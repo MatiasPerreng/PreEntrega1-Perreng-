@@ -8,6 +8,8 @@ import reactLogo from './assets/react.svg';
 
 function App() {
 
+  const categories = ['Human', 'Alien', 'Other'];
+
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -26,9 +28,7 @@ function App() {
       <NavBar
 
         child1={<img src={reactLogo} alt="React Logo" />}
-        child2={<NavElements value="Inicio" />}
-        child3={<NavElements value="Tienda" />}
-        child4={<NavElements value="Contacto" />}
+        data={categories}
       />
 
       <ListItem
