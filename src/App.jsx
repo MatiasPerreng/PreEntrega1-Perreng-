@@ -26,12 +26,12 @@ function App() {
   return (
     <>
       <NavBar
-
         child1={<img src={reactLogo} alt="React Logo" />}
         data={categories}
       />
 
       <ListItem
+        greetings={'Bievenidos a mi segunda entrega Coders'}
         data={characters} />
 
     </>
