@@ -16,6 +16,21 @@
     margin-top: 20px;
 }
 
+
+.quantity-input {
+width: 20px;
+  
+}
+
+.quantity-button{
+    background-color: #143b04;
+    border: none;
+}
+
+.quantity-button:hover{
+    background-color: #1b5205;
+}
+
 .item-title {
     margin-top: 10px;
 }

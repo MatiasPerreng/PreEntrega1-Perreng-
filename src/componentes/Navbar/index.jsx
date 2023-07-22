@@ -1,10 +1,8 @@
-import './styles.css'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import NavElements from '../NavElements';
 import CartWidget from '../CartWidget';
 
-const Navbar = ({ child1, data }) => {
+const Navbar = ({ child1, data, onCategoryChange }) => {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container">
@@ -13,7 +11,15 @@ const Navbar = ({ child1, data }) => {
         </a>
         <ul className="navbar-nav d-flex flex-row">
           {data.map((category, index) => (
-            <NavElements key={index} value={category} />
+            <li key={index} className="nav-item">
+              <a
+                href="#"
+                className="nav-link"
+                onClick={() => onCategoryChange(category)}
+              >
+                {category}
+              </a>
+            </li>
           ))}
           <CartWidget />
           <li className='numberItem'>( 0 )</li>

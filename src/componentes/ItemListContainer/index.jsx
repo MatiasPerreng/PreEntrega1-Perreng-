@@ -3,14 +3,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ItemContainer from '../itemsOfContainer';
 
 function ListItem(props) {
+  const { data, selectedCategory } = props;
 
-  console.log("PERSONAJES: ", props.data);
+  console.log("PERSONAJES: ", data);
+
+  const filteredCharacters = selectedCategory
+    ? data.filter((character) => character.species === selectedCategory)
+    : data;
 
   function renderCharacters() {
-    return props.data.map((character) => (
+    return filteredCharacters.map((character) => (
       <ItemContainer
-        key={character.id} 
-        character={character} 
+        key={character.id}
+        character={character}
       />
     ));
   }
