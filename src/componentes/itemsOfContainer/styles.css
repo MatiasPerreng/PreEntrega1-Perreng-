@@ -22,10 +22,21 @@
 
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+
+}
+
 .quantity-button {
     background-color: #143b04;
     border: none;
-    margin-top:21px;
+    margin-top: 21px;
 }
 
 .quantity-button:hover {

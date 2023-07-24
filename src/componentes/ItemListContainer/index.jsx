@@ -21,7 +21,7 @@ function ListItem(props) {
   }
 
   return (
-    <div className='list__container row'>
+    <div className='list__container row' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <h1 style={{ color: 'black', fontSize: '24px', textAlign: 'center', marginTop: '25px' }}>{props.greetings}</h1>
       {renderCharacters()}
     </div>

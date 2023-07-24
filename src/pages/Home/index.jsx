@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import NavBar from '../../componentes/Navbar';
 import ListItem from '../../componentes/ItemListContainer';
-import NavBar from './componentes/Navbar';
-import { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import reactLogo from '../../assets/react.svg';
 
-function Home(){
-
+const Home = () => {
   const categories = ['Human', 'Alien', 'All'];
   const [characters, setCharacters] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -20,9 +20,8 @@ function Home(){
       });
   }, []);
 
-
   const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
+    setSelectedCategory(category === 'All' ? null : category);
   };
 
   return (
@@ -34,14 +33,12 @@ function Home(){
       />
 
       <ListItem
-        greetings={'Bievenidos a mi segunda entrega Coders'}
+        greetings={'Bienvenidos a mi segunda entrega Coders'}
         data={characters}
         selectedCategory={selectedCategory}
       />
     </>
   );
-
-
-}
+};
 
 export default Home;
