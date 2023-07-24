@@ -1,18 +1,19 @@
-.nav-item a{
-text-decoration: none!important;
+.nav-item a {
+    text-decoration: none !important;
 }
-.numberItem{
+
+.numberItem {
     margin-top: 2px;
-    margin-left:6px;
+    margin-left: 6px;
     color: white;
 }
 
-.nav-item {
+.nav-link {
     color: white;
     text-decoration: none;
-    margin: 20px;
+    margin-left: 60px;
 }
 
-.item-list:hover{
+.item-list:hover {
     color: rgba(71, 206, 67, 0.573);
 }

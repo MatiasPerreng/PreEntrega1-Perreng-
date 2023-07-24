@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import CartWidget from '../CartWidget';
+import './styles.css'
 
 const Navbar = ({ child1, data, onCategoryChange }) => {
   return (

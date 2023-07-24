@@ -18,16 +18,17 @@
 
 
 .quantity-input {
-width: 20px;
-  
+    width: 10px;
+
 }
 
-.quantity-button{
+.quantity-button {
     background-color: #143b04;
     border: none;
+    margin-top:21px;
 }
 
-.quantity-button:hover{
+.quantity-button:hover {
     background-color: #1b5205;
 }
 
