@@ -3,9 +3,11 @@ import ListItem from '../../componentes/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-const Home = () => {
+const Home = ({selectedCategory}) => {
+
   const [characters, setCharacters] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState(null);
+
+
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character')

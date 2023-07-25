@@ -1,18 +1,26 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import NavBarContainer from './pages/NavbarContainer';
-
+import NavBarContainer from './componentes/Navbar';
 
 const App = () => {
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
     <BrowserRouter>
 
-      <NavBarContainer/>
+      <NavBarContainer
+        selectedCategory={selectedCategory}
+        onSelectCategory={setSelectedCategory}
+
+      />
 
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home
+          selectedCategory={selectedCategory}
+        />} />
       </Routes>
 
     </BrowserRouter>
