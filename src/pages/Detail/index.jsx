@@ -1,7 +1,7 @@
-// Detail.js (en la carpeta "pages")
+
 import React, { useEffect, useState } from 'react';
 import ItemDetailContainer from '../../componentes/itemDetailContainer';
-import { useParams, Link } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 
 const Detail = () => {
   const { id } = useParams();
@@ -25,11 +25,6 @@ const Detail = () => {
   return (
     <div>
       <ItemDetailContainer character={character} />
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-        <Link to="/" className="btn btn-success" >
-          Volver al Home
-        </Link>
-      </div>
     </div>
   );
 };

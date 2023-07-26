@@ -13,6 +13,27 @@
     text-decoration: none;
     margin-left: 28px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: rgba(71, 206, 67, 0.573);
+}
+
+#HomeButton {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 250px;
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#HomeButton:hover{
+    background-color: rgb(58, 126, 63);
 }

@@ -1,6 +1,4 @@
 
-
-
 import reactLogo from '../../assets/react.svg'
 import Navbar from './Navbar';
 
@@ -14,11 +12,19 @@ const NavBarContainer = ({ selectedCategory, onSelectCategory }) => {
   };
 
   return (
-    <Navbar
-      child1={<img src={reactLogo} alt="React Logo" />}
-      data={categories}
-      onCategoryChange={handleCategoryChange}
-    />
+
+    <>
+      <Navbar
+        child1={<img src={reactLogo} alt="React Logo" />}
+        data={categories}
+        onCategoryChange={handleCategoryChange}
+      />
+   
+    </>
+
+
+
+
   );
 };
 
