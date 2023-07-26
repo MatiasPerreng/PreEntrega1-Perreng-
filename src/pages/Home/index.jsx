@@ -2,12 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ListItem from '../../componentes/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.css';
 
-
-const Home = ({selectedCategory}) => {
-
+const Home = ({ selectedCategory }) => {
   const [characters, setCharacters] = useState([]);
-
-
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character')
@@ -20,7 +16,6 @@ const Home = ({selectedCategory}) => {
       });
   }, []);
 
-
   return (
     <>
       <ListItem
@@ -28,8 +23,12 @@ const Home = ({selectedCategory}) => {
         data={characters}
         selectedCategory={selectedCategory}
       />
+
+
+      
     </>
   );
 };
 
 export default Home;
+
