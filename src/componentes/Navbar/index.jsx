@@ -6,10 +6,7 @@ import Navbar from './Navbar';
 
 const NavBarContainer = ({ selectedCategory, onSelectCategory }) => {
 
-
   const categories = ['Human', 'Alien', 'All'];
-
-
 
   const handleCategoryChange = (category) => {
     onSelectCategory(category === 'All' ? null : category);

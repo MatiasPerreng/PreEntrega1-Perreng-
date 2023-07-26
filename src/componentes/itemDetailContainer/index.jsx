@@ -1,10 +1,10 @@
 
-
 import React, { useState } from 'react';
-import ItemDetail from '../itemDetail';
+import ItemDetail from '../ItemDetail';
 
 const ItemDetailContainer = ({ character }) => {
   const [quantity, setQuantity] = useState(1);
+  const [cartCount, setCartCount] = useState(0);
 
   const handleIncreaseQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
@@ -16,13 +16,20 @@ const ItemDetailContainer = ({ character }) => {
     }
   };
 
+  const handleAddToCart = (quantity) => {
+    setCartCount((prevCount) => prevCount + quantity);
+  };
+
   return (
-    <ItemDetail
-      character={character}
-      quantity={quantity}
-      onIncreaseQuantity={handleIncreaseQuantity}
-      onDecreaseQuantity={handleDecreaseQuantity}
-    />
+    <div>
+      <ItemDetail
+        character={character}
+        quantity={quantity}
+        onIncreaseQuantity={handleIncreaseQuantity}
+        onDecreaseQuantity={handleDecreaseQuantity}
+        onAddToCart={handleAddToCart}
+      />
+    </div>
   );
 };
 

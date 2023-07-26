@@ -1,9 +1,10 @@
 
 import React from 'react';
 
-const ItemDetail = ({ character, quantity, onIncreaseQuantity, onDecreaseQuantity }) => {
+const ItemDetail = ({ character, quantity, onIncreaseQuantity, onDecreaseQuantity, onAddToCart }) => {
   return (
-    <div className="detail card text-center">
+    <div className="detail card text-center" style={{ maxWidth: '270px', margin: '0 auto', marginTop: '50px' }}>
+      <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '15px', marginTop: '20px' }}>Detalles del personaje</h2>
       <img
         src={character.image}
         alt={character.name}
@@ -35,6 +36,7 @@ const ItemDetail = ({ character, quantity, onIncreaseQuantity, onDecreaseQuantit
             </div>
           </div>
         </div>
+        <button onClick={onAddToCart} className="btn btn-success" style={{ marginTop: '20px' }}>Añadir al carrito</button>
       </div>
     </div>
   );

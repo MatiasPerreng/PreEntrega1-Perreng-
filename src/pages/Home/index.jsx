@@ -23,9 +23,6 @@ const Home = ({ selectedCategory }) => {
         data={characters}
         selectedCategory={selectedCategory}
       />
-
-
-      
     </>
   );
 };

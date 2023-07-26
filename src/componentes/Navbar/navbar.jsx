@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../../assets/react.svg'
+import logo from '../../assets/react.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import CartWidget from '../CartWidget';
-import './styles.css'
+import './styles.css';
 
-const Navbar = ({data, onCategoryChange }) => {
+const Navbar = ({ data, onCategoryChange, cartCount }) => {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container">
@@ -24,7 +24,7 @@ const Navbar = ({data, onCategoryChange }) => {
             </li>
           ))}
           <CartWidget />
-          <li className='numberItem'>( 0 )</li>
+          <li className='numberItem'>({cartCount})</li>
         </ul>
       </div>
     </nav>
@@ -32,3 +32,4 @@ const Navbar = ({data, onCategoryChange }) => {
 };
 
 export default Navbar;
+
