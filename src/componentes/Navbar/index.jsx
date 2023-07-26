@@ -2,7 +2,7 @@
 import reactLogo from '../../assets/react.svg'
 import Navbar from './Navbar';
 
-const NavBarContainer = ({ selectedCategory, onSelectCategory }) => {
+const NavBarContainer = ({ onSelectCategory }) => {
 
   const categories = ['Human', 'Alien', 'All'];
 
@@ -21,9 +21,6 @@ const NavBarContainer = ({ selectedCategory, onSelectCategory }) => {
       />
    
     </>
-
-
-
 
   );
 };
