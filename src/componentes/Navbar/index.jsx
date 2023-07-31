@@ -1,6 +1,6 @@
 
 import reactLogo from '../../assets/react.svg'
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 const NavBarContainer = () => {
 

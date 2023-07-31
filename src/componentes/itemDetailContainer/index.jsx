@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import ItemDetail from '../ItemDetail';
+import ItemDetail from '../itemDetail';
 
 const ItemDetailContainer = ({ character }) => {
   const [quantity, setQuantity] = useState(1);
