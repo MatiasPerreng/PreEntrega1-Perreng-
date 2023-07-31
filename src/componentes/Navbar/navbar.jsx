@@ -4,9 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import CartWidget from '../CartWidget';
 import { Link } from 'react-router-dom';
 
+
+
 import './styles.css';
 
-const Navbar = ({ data, onCategoryChange, cartCount }) => {
+const Navbar = ({ data, cartCount = 7 }) => {
+
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container">
@@ -19,16 +22,16 @@ const Navbar = ({ data, onCategoryChange, cartCount }) => {
         </Link>
 
         <ul className="navbar-nav d-flex flex-row">
-          {data.map((category, index) => (
-            <li key={index} className="nav-item">
-              <a
-                href="#"
+          {data.map((category) => (
+            <li key={category.id} className="nav-item">
+              <Link
                 className="nav-link"
-                onClick={() => onCategoryChange(category)}
+                to={category.path}
               >
-                {category}
-              </a>
+                {category.name}
+              </Link>
             </li>
+
           ))}
           <CartWidget />
           <li className='numberItem'>({cartCount})</li>
@@ -36,7 +39,9 @@ const Navbar = ({ data, onCategoryChange, cartCount }) => {
       </div>
     </nav>
   );
+
 };
 
-export default Navbar;
 
+
+export default Navbar;

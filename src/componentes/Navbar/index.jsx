@@ -1,28 +1,32 @@
 
 import reactLogo from '../../assets/react.svg'
-import Navbar from './Navbar';
+import Navbar from './navbar';
 
-const NavBarContainer = ({ onSelectCategory }) => {
+const NavBarContainer = () => {
 
-  const categories = ['Human', 'Alien', 'All'];
+  const categories = [
+    {name:'Human', path:'/category/Human', id:1},
+    { name:'Alien', path:'/category/Alien', id:2},
+    {name:'All', path:'/', id:3}
 
-  const handleCategoryChange = (category) => {
-    onSelectCategory(category === 'All' ? null : category);
-    console.log('Hola Mundo')
-  };
+    ];
+
 
   return (
+
+
 
     <>
       <Navbar
         child1={<img src={reactLogo} alt="React Logo" />}
         data={categories}
-        onCategoryChange={handleCategoryChange}
       />
-   
     </>
 
   );
+
 };
+
+
 
 export default NavBarContainer;
