@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import ItemDetailContainer from '../../componentes/itemDetailContainer';
 import { RotateLoader } from 'react-spinners';
 import { useParams } from 'react-router-dom';
+import Rick from '../../images/Rick.jpeg';
+import Morty from '../../images/Morty.jpeg';
+import Summer from '../../images/Summer.jpeg';
+import Beth from '../../images/Beth.jpeg';
+import Jerry from '../../images/Jerry.jpeg';
+import Birdperson from '../../images/Birdperson.jpeg';
+import Squanchy from '../../images/Squanchy.jpeg';
 
 const Detail = () => {
   const { id } = useParams();
@@ -15,7 +22,7 @@ const Detail = () => {
         status: 'Alive',
         species: 'Human',
         gender: 'Male',
-        image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+        image: Rick,
       },
       {
         id: 2,
@@ -23,7 +30,7 @@ const Detail = () => {
         status: 'Alive',
         species: 'Human',
         gender: 'Male',
-        image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+        image: Morty,
       },
       {
         id: 3,
@@ -31,7 +38,7 @@ const Detail = () => {
         status: 'Alive',
         species: 'Human',
         gender: 'Female',
-        image: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
+        image: Summer,
       },
       {
         id: 4,
@@ -39,7 +46,7 @@ const Detail = () => {
         status: 'Alive',
         species: 'Human',
         gender: 'Female',
-        image: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
+        image: Beth,
       },
       {
         id: 5,
@@ -47,7 +54,7 @@ const Detail = () => {
         status: 'Alive',
         species: 'Human',
         gender: 'Male',
-        image: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
+        image: Jerry,
       },
       {
         id: 6,
@@ -55,7 +62,7 @@ const Detail = () => {
         status: 'Alive',
         species: 'Alien',
         gender: 'Male',
-        image: 'https://rickandmortyapi.com/api/character/avatar/12.jpeg',
+        image: Birdperson,
       },
       {
         id: 7,
@@ -63,9 +70,8 @@ const Detail = () => {
         status: 'Alive',
         species: 'Alien',
         gender: 'Male',
-        image: 'https://rickandmortyapi.com/api/character/avatar/72.jpeg',
+        image: Squanchy,
       },
-
     ];
 
     const characterData = charactersData.find(
@@ -80,12 +86,12 @@ const Detail = () => {
   if (!character) {
     return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <RotateLoader
-      strokeColor="grey"
-      strokeWidth="5"
-      animationDuration="0.75"
-      width="96"
-      visible={true}
-    />
+        strokeColor="grey"
+        strokeWidth="5"
+        animationDuration="0.75"
+        width="96"
+        visible={true}
+      />
     </div>;
   }
 
