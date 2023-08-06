@@ -15,7 +15,6 @@ const Home = () => {
   const { category } = useParams();
 
   useEffect(() => {
-    // Creamos una función para simular la solicitud asíncrona
     const fetchData = () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -78,7 +77,7 @@ const Home = () => {
             },
           ];
           resolve(charactersData);
-        }, 50); 
+        }, ); 
       });
     };
 
