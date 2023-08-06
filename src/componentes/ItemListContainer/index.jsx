@@ -15,11 +15,9 @@ function ListItem(props) {
         character={character}
 
       />
-
     ));
 
   }
-
   return (
 
     <div className='list__container row' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
