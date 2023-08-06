@@ -1,6 +1,7 @@
-
 import reactLogo from '../../assets/react.svg'
-import Navbar from './Navbar';
+import Navbar from './navbar';
+
+
 
 const NavBarContainer = () => {
 
@@ -11,16 +12,17 @@ const NavBarContainer = () => {
 
     ];
 
-
   return (
 
 
 
     <>
+
       <Navbar
         child1={<img src={reactLogo} alt="React Logo" />}
         data={categories}
       />
+
     </>
 
   );

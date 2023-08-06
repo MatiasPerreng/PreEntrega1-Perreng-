@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
-const Navbar = ({ data, cartCount = 7 }) => {
+
+const Navbar = ({ data,  cartCount =7 }) => {
 
   return (
     <nav className="navbar navbar-dark bg-dark">
@@ -21,12 +22,15 @@ const Navbar = ({ data, cartCount = 7 }) => {
           Inicio
         </Link>
 
+
+
         <ul className="navbar-nav d-flex flex-row">
           {data.map((category) => (
             <li key={category.id} className="nav-item">
               <Link
                 className="nav-link"
                 to={category.path}
+
               >
                 {category.name}
               </Link>
@@ -38,6 +42,7 @@ const Navbar = ({ data, cartCount = 7 }) => {
         </ul>
       </div>
     </nav>
+
   );
 
 };

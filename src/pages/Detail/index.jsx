@@ -81,7 +81,7 @@ const Detail = () => {
     setTimeout(() => {
       setCharacter(characterData);
     }, 1000);
-  }, [id]);
+  }, []);
 
   if (!character) {
     return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
