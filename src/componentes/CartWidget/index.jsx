@@ -10,10 +10,8 @@ function CartWidget() {
   return (
     <div className="cart-widget">
       <FaShoppingCart className='cartWidget' size={32} />
-      <Badge variant="danger" className="cart-badge">
-        {cartQuantity()}
-      </Badge>
-    </div>
+      {cartQuantity() > 0 && < Badge variant="danger" className="cart-badge">{cartQuantity()}</Badge>}
+    </div >
   );
 }
 

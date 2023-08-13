@@ -2,14 +2,14 @@ import React from 'react';
 import logo from '../../assets/react.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import CartWidget from '../CartWidget';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
 import './styles.css';
 
 
-const Navbar = ({ data}) => {
+const Navbar = ({ data }) => {
 
   return (
     <nav className="navbar navbar-dark bg-dark">
@@ -37,8 +37,8 @@ const Navbar = ({ data}) => {
             </li>
 
           ))}
-          <CartWidget />
-          
+          <NavLink to='/cart'> <CartWidget /> </NavLink>
+
         </ul>
       </div>
     </nav>

@@ -7,6 +7,7 @@ import NavBarContainer from './componentes/Navbar';
 import Detail from './pages/Detail';
 import { useEffect } from 'react';
 import { CartProvider } from './context/CartContext';
+import Cart from './componentes/Cart/Cart';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAcFS0sYuXKBy7dI8fr95-DdmD1-d1Wcx4",
@@ -52,6 +53,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/category/:category" element={<Home />} />
           <Route path="/detail/:id" element={<Detail />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
 
       </BrowserRouter>
