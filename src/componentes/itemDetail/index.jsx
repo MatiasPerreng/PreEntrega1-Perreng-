@@ -1,7 +1,25 @@
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../../context/CartContext';
 
-import React from 'react';
+const ItemDetail = ({ character }) => {
+  const [quantity, setQuantity] = useState(1);
+  const { addItem } = useContext(CartContext);
 
-const ItemDetail = ({ character, quantity, onIncreaseQuantity, onDecreaseQuantity, onAddToCart }) => {
+  const onIncreaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const onDecreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const onAddToCart = () => {
+    addItem(character, quantity);
+    console.log('Producto añadido al carrito:', character, 'Cantidad:', quantity);
+  };
+
   return (
     <div className="detail card text-center" style={{ maxWidth: '270px', margin: '0 auto', marginTop: '50px' }}>
       <h2 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '15px', marginTop: '20px' }}>Detalles del personaje</h2>
@@ -36,7 +54,9 @@ const ItemDetail = ({ character, quantity, onIncreaseQuantity, onDecreaseQuantit
             </div>
           </div>
         </div>
-        <button onClick={onAddToCart} className="btn btn-success" style={{ marginTop: '20px' }}>Añadir al carrito</button>
+        <button onClick={onAddToCart} className="btn btn-success" style={{ marginTop: '20px' }}>
+          Añadir al carrito
+        </button>
       </div>
     </div>
   );
