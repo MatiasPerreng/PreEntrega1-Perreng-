@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 
 
-const Navbar = ({ data,  cartCount =7 }) => {
+const Navbar = ({ data}) => {
 
   return (
     <nav className="navbar navbar-dark bg-dark">
@@ -38,7 +38,7 @@ const Navbar = ({ data,  cartCount =7 }) => {
 
           ))}
           <CartWidget />
-          <li className='numberItem'>({cartCount})</li>
+          
         </ul>
       </div>
     </nav>
