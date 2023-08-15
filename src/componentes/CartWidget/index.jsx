@@ -8,7 +8,7 @@ function CartWidget() {
   const { cartQuantity } = useContext(CartContext);
 
   return (
-    <div className="cart-widget">
+    <div className="cart-widget ">
       <FaShoppingCart className='cartWidget' size={32} />
       {cartQuantity() > 0 && < Badge variant="danger" className="cart-badge">{cartQuantity()}</Badge>}
     </div >
