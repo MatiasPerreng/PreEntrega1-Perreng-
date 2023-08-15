@@ -25,6 +25,7 @@ const Home = () => {
               status: 'Alive',
               species: 'Human',
               gender: 'Male',
+              price: '410',
               image: Rick,
             },
             {
@@ -33,6 +34,7 @@ const Home = () => {
               status: 'Alive',
               species: 'Human',
               gender: 'Male',
+              price: '450',
               image: Morty,
             },
             {
@@ -41,6 +43,7 @@ const Home = () => {
               status: 'Alive',
               species: 'Human',
               gender: 'Female',
+              price: '220',
               image: Summer,
             },
             {
@@ -49,6 +52,7 @@ const Home = () => {
               status: 'Alive',
               species: 'Human',
               gender: 'Female',
+              price: '720',
               image: Beth,
             },
             {
@@ -57,6 +61,7 @@ const Home = () => {
               status: 'Alive',
               species: 'Human',
               gender: 'Male',
+              price: '220',
               image: Jerry,
             },
             {
@@ -65,6 +70,7 @@ const Home = () => {
               status: 'Alive',
               species: 'Alien',
               gender: 'Male',
+              price: '620',
               image: Birdperson,
             },
             {
@@ -73,11 +79,12 @@ const Home = () => {
               status: 'Alive',
               species: 'Alien',
               gender: 'Male',
+              price: '120',
               image: Squanchy,
             },
           ];
           resolve(charactersData);
-        }, ); 
+        },);
       });
     };
 

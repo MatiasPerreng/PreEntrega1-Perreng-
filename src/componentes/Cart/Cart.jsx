@@ -4,24 +4,37 @@ import { Link } from "react-router-dom";
 import CartItem from "../CartItem";
 
 const Cart = () => {
-    const { cart, clear, total } = useContext(CartContext)
+    const { cart, clear, total } = useContext(CartContext);
+
     return (
-        <div>
-            {cart.length
-                ? <div>
-                    {cart.map((item) => <CartItem key={item.id} item={item} />)}
-                    <p>total a pagar: ${total()}</p>
-                    <div>
-                        <button className='btn btn-danger' onClick={clear}>Vaciar Carrito</button>
-                        <Link className='btn btn-dark'>Terminar compra</Link>
+        <div className="container mt-5">
+            {cart.length ? (
+                <div>
+                    {cart.map((item) => (
+                        <CartItem key={item.id} item={item} />
+                    ))}
+                    <div className="d-flex justify-content-between align-items-center mt-4">
+                        <p className="h5">Total a pagar: ${total()}</p>
+                        <div>
+                            <button className="btn btn-danger" onClick={clear}>
+                                Vaciar Carrito
+                            </button>
+                            <Link to="/" className="btn btn-dark ms-2">
+                                Terminar compra
+                            </Link>
+                        </div>
                     </div>
                 </div>
-                : <div>
-                    <h3>Tu carrito está vacio</h3>
-                    <link to='/' className="btn btn-success">Ir a comprar</link>
-                </div>}
+            ) : (
+                <div className="text-center">
+                    <h3>Tu carrito está vacío</h3>
+                    <Link to="/" className="btn btn-success">
+                        Ir a comprar
+                    </Link>
+                </div>
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;
