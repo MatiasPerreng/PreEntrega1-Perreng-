@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, query, where, addDoc } from 'firebase/firestore';
 
 export const FirestoreContext = createContext();
 
@@ -31,8 +31,32 @@ export default function FirestoreProvider({ children }) {
             });
     }
 
+    function addProductToCart(product, quantity, subtotal) {
+        const itemToCart = {
+            user: {
+                name: 'Matias',
+                surname: 'Perreng'
+            },
+            item: [
+                {
+                    ...product,
+                    quantity,
+                    subtotal
+                }
+            ]
+        }
+
+        const OrdersCollection = collection(db, 'orders');
+        addDoc(OrdersCollection, itemToCart)
+            .then((order) => {
+                console.log('order: ', order)
+            })
+    }
+
+
     return (
         <FirestoreContext.Provider value={{
+            addProductToCart,
             getAllProducts,
             getProductsByCategory,
             characters

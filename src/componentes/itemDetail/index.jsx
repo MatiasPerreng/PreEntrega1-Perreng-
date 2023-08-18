@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
+import { FirestoreContext } from '../../context/FirestoreContext';
 import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ character }) => {
   const [quantity, setQuantity] = useState(1);
+  const { addProductToCart } = useContext(FirestoreContext);
   const { addItem } = useContext(CartContext);
 
   const onIncreaseQuantity = () => {
@@ -16,6 +18,8 @@ const ItemDetail = ({ character }) => {
   };
 
   const onAddToCart = () => {
+    const subtotal = character.price * quantity;
+    addProductToCart(character, quantity, subtotal);
     addItem(character, quantity);
     console.log('Producto añadido al carrito:', character, 'Cantidad:', quantity);
   };
