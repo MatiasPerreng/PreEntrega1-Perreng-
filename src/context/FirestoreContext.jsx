@@ -20,7 +20,7 @@ export default function FirestoreProvider({ children }) {
     }
 
     function getProductsByCategory(category) {
-        const q = query(collection(db, 'productos'), where('category', '==', category));
+        const q = query(collection(db, 'productos'), where('species', '==', category));
         getDocs(q)
             .then((snapshot) => {
                 const productsData = snapshot.docs.map((product) => ({

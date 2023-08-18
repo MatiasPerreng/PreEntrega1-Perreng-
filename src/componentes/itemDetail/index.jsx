@@ -27,8 +27,7 @@ const ItemDetail = ({ character }) => {
         src={character.image}
         alt={character.name}
         className="detail-image card-img-top mx-auto"
-        height={200}
-        width={200}
+        style={{ width: '220px', height: '200px' }}
       />
       <div className="card-body">
         <h3 className="detail-title card-title">{character.name}</h3>
