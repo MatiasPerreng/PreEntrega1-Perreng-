@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { getFirestore, collection, getDocs, query, where, addDoc } from 'firebase/firestore';
+import { getFirestore, doc, collection, getDocs, query, where, addDoc, updateDoc } from 'firebase/firestore';
 
 export const FirestoreContext = createContext();
 
@@ -51,8 +51,10 @@ export default function FirestoreProvider({ children }) {
             .then((order) => {
                 console.log('order: ', order)
             })
-    }
 
+        // const productDoc = doc(db, 'productos', product.id); 
+        // updateDoc(productDoc, {stock: product.stock - 1});   INTENTÉ IMPLEMENTAR ESTO PERO NO ME FUNCIONÓ
+    }
 
     return (
         <FirestoreContext.Provider value={{
